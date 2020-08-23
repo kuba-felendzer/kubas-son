@@ -99,7 +99,7 @@ class Random(commands.Cog):
 
     @commands.command()
     async def imp(self, ctx):
-        await ctx.send(f"who is {ctx.author.name}?\nin math: my solution:currency_exchange:\nin history: my queen:thinking:\nin art: my canvas:art:\nin science: my oxygen:test_tude:\nin geography: my world:world_map:\nin toilet: my shit:poop:)
+        await ctx.send(f"who is {ctx.author.name}?\nin math: my solution:currency_exchange:\nin history: my queen:thinking:\nin art: my canvas:art:\nin science: my oxygen:test_tube:\nin geography: my world:world_map:\nin toilet: my shit:poop:")
 
     @commands.command()
     async def hart(self, ctx):
