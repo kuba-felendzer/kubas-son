@@ -103,7 +103,10 @@ class Random(commands.Cog):
 
     @commands.command()
     async def hart(self, ctx):
-        for x in range(1, 6):
-            await ctx.send(":poop:")
+        if ctx.author.id == "456636070516228099": await ctx.send("no mr. shit spammer")
+        else:
+            for x in range(1, 6):
+                await ctx.send(":poop:")
+                
 def setup(client):
     client.add_cog(Random(client))
