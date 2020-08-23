@@ -116,5 +116,31 @@ class Random(commands.Cog):
     async def tinky(self, ctx):
         await ctx.send(f"god damn you smell, {ctx.author.name}")
 
+    @commands.command()
+    async def hotgun(self, ctx):
+        await ctx.send("Mossberg 590A1 meta in Tom Clancy's Rainbow Six Siege")
+
+    @commands.command(aliases=["hawty"])
+    async def horty(self, ctx):
+        lyrics = [
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "Remember the first time we met\nYou was at the mall with your friends\nI was scared to approach ya\nBut then you came closer\nHopin' you would give me a chance",
+            "Who would have ever knew\nThat we would ever be more than friends\nWe're real worldwide, breakin all the rules\nShe like a song played again and again",
+            "That girl, like somethin off a poster\nThat girl, is a dime they say\nThat girl, is a gun to my holster\nShe's runnin through my mind all day, ay",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "See you been all around the globe\nNot once did you leave my mind\nWe talk on the phone, from night til the morn\nGirl you really change my life\nDoin things I never do\nI'm in the kitchen cookin things she likes",
+            "We're real worldwide, breakin all the rules\nSomeday I wanna make you my wife\nThat girl, like somethin off a poster\nThat girl, is a dime they say\nThat girl, is the gun to my holster\nShe's runnin through my mind all day, ay",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "I can be your melody\nA girl that could write you a symphony\nThe one that could fill your fantasies\nSo come baby girl let's sing with me\nAy, I can be your melody\nA girl that could write you a symphony\nThe one that could fill your fantasies\nSo come baby girl let's sing with me",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay",
+            "Shawty's like a melody in my head\nThat I can't keep out\nGot me singin' like\nNa na na na everyday\nIt's like my ipod stuck on replay, replay-ay-ay-ay"
+        ]
+        for line in lyrics:
+            await ctx.send(line)
+            await asyncio.sleep(3)
+
 def setup(client):
     client.add_cog(Random(client))

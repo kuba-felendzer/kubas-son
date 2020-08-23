@@ -28,7 +28,10 @@ class Help(commands.Cog):
                 "speedrun",
                 "shart",
                 "spam",
-                "stop"]
+                "stop",
+                "stinky",
+                "shotgun",
+                "shawty"]
         self.cmdusagelist = ["makes me simp",
                 "my favorite song",
                 "she's a hottie",
@@ -51,7 +54,10 @@ class Help(commands.Cog):
                 "very fast",
                 "big poopy",
                 "spam `@target` `amount` `message`",
-                "stops the spam"]
+                "stops the spam",
+                "ew",
+                "for SAS fanboys",
+                "2nd best song"]
 
     @commands.command()
     async def help(self, ctx):
