@@ -25,7 +25,10 @@ class Help(commands.Cog):
                 "spell icup", 
                 "stupid", 
                 "succ", 
-                "speedrun"]
+                "speedrun",
+                "shart",
+                "spam",
+                "stop"]
         self.cmdusagelist = ["makes me simp",
                 "my favorite song",
                 "she's a hottie",
@@ -45,7 +48,10 @@ class Help(commands.Cog):
                 "no please i don wanna",
                 "that's not the word",
                 "kono diaaaaaaaaaaaaaaaaaa",
-                "very fast"]
+                "very fast",
+                "big poopy",
+                "spam `@target` `amount` `message`",
+                "stops the spam"]
 
     @commands.command()
     async def help(self, ctx):
@@ -54,8 +60,7 @@ class Help(commands.Cog):
             return out
 
         fullcmdlist = join_lists(self.commandlist, self.cmdusagelist)
-        embed = discord.Embed(title="Help", description="retard cant figure it out", color=discord.Color.greyple())
-        embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
+        embed = discord.Embed(title="Help", description=f"{ctx.author.name} cant figure it out", color=discord.Color.greyple())
         embed.set_footer(text=self.client.user.name, icon_url=self.client.user.avatar_url)
 
         for cmd in fullcmdlist:
