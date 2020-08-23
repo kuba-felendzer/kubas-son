@@ -11,12 +11,6 @@ class Random(commands.Cog):
         await ctx.send("you cannot suppress me commie fucker")
 
     @commands.command()
-    async def top(self, ctx):
-        global stop
-        stop = True
-        await ctx.send("Stopped Spamming!")
-
-    @commands.command()
     async def ing(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/657338714850197505/740643115618271302/IMG428707969551654037.mp4")
 
@@ -105,7 +99,11 @@ class Random(commands.Cog):
 
     @commands.command()
     async def imp(self, ctx):
-        await ctx.send("who is pokimane?\nin math: my solution:currency_exchange:\nin history: my queen:thinking:\nin art: my canvas:art:\nin science: my oxygen:test_tude:\nin geography: my world:world_map:")
+        await ctx.send(f"who is {ctx.author.name}?\nin math: my solution:currency_exchange:\nin history: my queen:thinking:\nin art: my canvas:art:\nin science: my oxygen:test_tude:\nin geography: my world:world_map:")
 
+    @commands.command()
+    async def hart(self, ctx):
+        for x in range(1, 6):
+            await ctx.send(":poop:")
 def setup(client):
     client.add_cog(Random(client))
