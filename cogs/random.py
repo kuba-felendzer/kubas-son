@@ -43,6 +43,8 @@ class Random(commands.Cog):
 
     @commands.command(aliases=["uck"])
     async def ucc(self, ctx):
+        async with ctx.typing():
+            asyncio.sleep(2)
         await ctx.send("Yoo IS THAT A MOTHERFUCCIN JOJO REFERENCE?!?!:100::100::o2::o2::100::100::o2::o2::100::no_entry_sign::100::no_entry_sign: ORAORAORAORAORAORA:sunglasses::atm::sunglasses::atm::sunglasses::atm::sunglasses::atm: MUDAMUDAMUDAMUDAMUDAMUDA:fire::hot_face::fire::hot_face::fire::hot_face::fire::hot_face: KILL DA HOE BEEEEEEEETCH:clown::no_entry_sign::clown::sos::clown::sos::clown::sos::no_entry_sign::no_entry_sign::no_entry_sign::b: GIORNO THEME:oncoming_police_car::oncoming_police_car::oncoming_police_car::oncoming_police_car::oncoming_police_car::oncoming_police_car:ZA WARUDO:medal::military_medal::medal::military_medal::medal::military_medal::medal::military_medal: AYAYAYAYYYYYYYY :scream::scream::scream::scream::scream::scream::scream::face_with_symbols_over_mouth: Yo Angelo! Yo Angelo! Yo Angelo! Yo Angelo! Yo Angelo! Yo Angelo!:moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai::moyai: I WANT TRISH AND JOLYNE HENTAI:tokyo_tower::statue_of_liberty::tokyo_tower::statue_of_liberty::tokyo_tower::statue_of_liberty::tokyo_tower::statue_of_liberty: PUCCI PLEASE RESET THE WORLD BECAUSE ARAKI FORGOT:beach_umbrella::beach_umbrella::beach_umbrella::beach_umbrella::beach_umbrella::beach_umbrella::beach_umbrella: KONO DIO DAAAAAA! RODO ROLA DAA!!!!:tickets::tickets::tickets::tickets::tickets::tickets::clapper: THE END.")
 
     @commands.command()
@@ -107,6 +109,6 @@ class Random(commands.Cog):
         else:
             for x in range(1, 6):
                 await ctx.send(":poop:")
-                
+
 def setup(client):
     client.add_cog(Random(client))
