@@ -4,8 +4,9 @@ import asyncio
 import random
 import os
 
+TOKEN = open("token.txt", "r").read()
 client = commands.Bot(command_prefix="s")
-TOKEN = "NzA2OTQ1MDUzNDE4ODQ4MjU2.XrBn4w.dRJb5w3819bAPjFHbWRPr7s568c"
+for line in open("token.txt"): TOKEN = line
 client.remove_command("help")
 global stop, commandlist, cmdusagelist
 commandlist = ["simp", 
