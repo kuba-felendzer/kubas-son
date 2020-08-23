@@ -101,6 +101,8 @@ class Random(commands.Cog):
 
     @commands.command()
     async def imp(self, ctx):
+        async with ctx.typing():
+            await asyncio.sleep(1.3)
         await ctx.send(f"who is {ctx.author.name}?\nin math: my solution:currency_exchange:\nin history: my queen:thinking:\nin art: my canvas:art:\nin science: my oxygen:test_tube:\nin geography: my world:world_map:\nin toilet: my shit:poop:")
 
     @commands.command()
@@ -109,6 +111,10 @@ class Random(commands.Cog):
         else:
             for x in range(1, 6):
                 await ctx.send(":poop:")
+
+    @commands.command(aliases=["melly"])
+    async def tinky(self, ctx):
+        await ctx.send(f"god damn you smell, {ctx.author.name}")
 
 def setup(client):
     client.add_cog(Random(client))
