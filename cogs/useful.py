@@ -9,7 +9,8 @@ class Useful(commands.Cog):
 
     @commands.command()
     async def pamist(self, ctx, *, arg):
-        if arg == "bad":
+        badwords = ["bad", "stinky", "sucks", "smelly", "retar", "retarded", "retarred", "dummy"]
+        if arg in badwords:
             await ctx.send("you've fucked up, buddy retard.")
             await asyncio.sleep(1)
             await ctx.send("prepare to get nannered")
