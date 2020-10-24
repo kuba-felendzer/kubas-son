@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
+import random
 
 class Useful(commands.Cog):
 
@@ -36,7 +37,7 @@ class Useful(commands.Cog):
 
     @commands.command()
     async def end(self, ctx, *, arg):
-        if "feet pics" in arg:
+        if "feet pics" in arg or "feet pic" in arg or "feet" in arg:
             await ctx.send("ok retard\nhttps://www.wikifeet.com/Imane_%27Pokimane%27_Anys")
 
     @commands.command()
@@ -49,9 +50,19 @@ class Useful(commands.Cog):
             else: newID = id
 
         if newID == "":
-            await ctx.send("how fucking stupid are you, cant even pick one. try 999 nerd\nhttp://www.scpwiki.com/scp-999")
+            randomSCP = random.randint(100, 999)
+            await ctx.send(f"how fucking stupid are you, cant even pick one. try {randomSCP} nerd\nhttp://www.scpwiki.com/scp-{randomSCP}")
         else:
             await ctx.send(f"http://www.scpwiki.com/scp-{newID}")
+
+    @commands.command()
+    async def chlah(self, ctx):
+        await ctx.send("Join us in worshipping our holy lord Schlah: https://discord.gg/7Z7PGhw")
+
+    @commands.command()
+    async def ay(self, ctx, *, msg=""):
+        if msg == "": await ctx.send("what the fuck do you want me to do? fucking retard, do i just send a newline? fuck you")
+        else: await ctx.send(msg)
 
 def setup(client):
     client.add_cog(Useful(client))

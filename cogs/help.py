@@ -31,7 +31,11 @@ class Help(commands.Cog):
                 "stop",
                 "stinky",
                 "shotgun",
-                "shawty"]
+                "shawty",
+                "schlah",
+                "sweat",
+                "sad",
+                "say"]
         self.cmdusagelist = ["makes me simp",
                 "my favorite song",
                 "she's a hottie",
@@ -41,7 +45,7 @@ class Help(commands.Cog):
                 "do scp <number>",
                 "you cannot.",
                 ":flushed::hot_face::hot_face:",
-                "sexd mom moment :sunglasses:",
+                "haha?",
                 "this command retar",
                 "i will dropkick you",
                 "my favorite funny epic dank meme offensive song",
@@ -57,7 +61,11 @@ class Help(commands.Cog):
                 "stops the spam",
                 "ew",
                 "for SAS fanboys",
-                "2nd best song"]
+                "2nd best song",
+                "praise our lord",
+                "every game is a speedrun",
+                "mmmmmmmm cake (not cock)",
+                "are you schtewpid"]
 
     @commands.command()
     async def help(self, ctx):
@@ -66,13 +74,12 @@ class Help(commands.Cog):
             return out
 
         fullcmdlist = join_lists(self.commandlist, self.cmdusagelist)
-        embed = discord.Embed(title="Help", description=f"{ctx.author.name} cant figure it out", color=discord.Color.greyple())
-        embed.set_footer(text=self.client.user.name, icon_url=self.client.user.avatar_url)
 
-        for cmd in fullcmdlist:
-            embed.add_field(name=cmd[0], value=cmd[1])
+        shelp = f"***{ctx.author.nick}*** *can't figure it out!*\n"
+        for cmd in fullcmdlist: shelp += f"**{cmd[0]}**: {cmd[1]}\n"
+            
     
-        await ctx.send(embed=embed)
+        await ctx.send(shelp)
 
 
 def setup(client):

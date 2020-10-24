@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
+import random
 
 class Random(commands.Cog):
     def __init__(self, client):
@@ -17,7 +18,11 @@ class Random(commands.Cog):
     @commands.command()
     async def ex(self, ctx, *, arg=""):
         if arg == "funny": await ctx.send("haha sex funi")
-        else: await ctx.send("I secksed you're mom :sunglasses:")
+        else: await ctx.send(f":face_vomiting: {ctx.author.mention} unironically has sexks before marriage")
+
+    @commands.command()
+    async def ecks(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/746906063776907284/769633600995721266/image0.png")
 
     @commands.command()
     async def tupid(self, ctx):
@@ -97,7 +102,7 @@ class Random(commands.Cog):
 
     @commands.command()
     async def peedrun(self, ctx, *, arg):
-        await ctx.send(f"OFFICIAL SPEEDRUN OF {arg.upper()} IN 00.23432771 SECONDS!!!!!!!!!!!!!!!!!!!!!")
+        await ctx.send(f"OFFICIAL SPEEDRUN OF {arg.upper()} IN 00.{random.randint(10000, 99999)} SECONDS!!!!!!!!!!!!!!!!!!!!!")
 
     @commands.command()
     async def imp(self, ctx):
@@ -105,9 +110,9 @@ class Random(commands.Cog):
             await asyncio.sleep(1.3)
         await ctx.send(f"who is {ctx.author.name}?\nin math: my solution:currency_exchange:\nin history: my queen:thinking:\nin art: my canvas:art:\nin science: my oxygen:test_tube:\nin geography: my world:world_map:\nin toilet: my shit:poop:")
 
-    @commands.command()
+    @commands.command(aliases=["hit"])
     async def hart(self, ctx):
-        if ctx.author.id == "456636070516228099": await ctx.send("no mr. shit spammer")
+        if ctx.author.id == "noofio#5180": await ctx.send("no mr. shit spammer")
         else:
             for x in range(1, 6):
                 await ctx.send(":poop:")
@@ -141,6 +146,12 @@ class Random(commands.Cog):
         for line in lyrics:
             await ctx.send(line)
             await asyncio.sleep(3)
+    
+    @commands.command()
+    async def weat(self, ctx): await ctx.send("<@458415107651665942>")
+
+    @commands.command()
+    async def ad(self, ctx): await ctx.send("so there was this cake competition right")
 
 def setup(client):
     client.add_cog(Random(client))
