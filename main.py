@@ -12,7 +12,7 @@ global stop, commandlist, cmdusagelist
 
 @client.event
 async def on_message(message):
-    if message.channel.name == 'hell-on-earth':
+    if message.channel.name in ["hell-on-earth", "speacial-containment-protocal"]:
         await client.process_commands(message)
 
 @client.event
